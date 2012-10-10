@@ -1,0 +1,36 @@
+/* Required Settings */
+.carousel .tabwindow
+{
+	overflow: hidden;
+
+	/* IE6/7 Fix */
+	position: relative;
+}
+
+.carousel .tablist
+{
+	position: relative;
+}
+
+.carousel .viewport
+{
+	overflow: hidden;
+
+	/* IE6/7 Fix */
+	position: relative;
+}
+
+.carousel .panel
+{
+	float: left;
+}
+
+.carousel .panellist
+{
+	position: relative;
+}
+
+.carousel .tab
+{
+	float: left;
+}

@@ -1,0 +1,96 @@
+/* Big Carousel */
+
+.big.carousel
+{
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.big.carousel .panel,
+.big.carousel .viewport
+{
+	width: 500px;
+	height: 300px;
+}
+
+.big.carousel .tab
+{
+	height: 20px;
+	width: 20px;
+	border: 2px solid #dcdccc;
+	border-radius: 20px;
+	color: #dcdccc;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	background-color: #1f1f1f;
+}
+
+.big.carousel .current.tab
+{
+	color: #ffffff;
+	border-color: #8afaf0;
+}
+
+.big.carousel .panel
+{
+	background-color: #1f1f1f;
+	color: #dcdccc;
+	text-align: center;
+	font-size: 36px;
+}
+
+.big.carousel .viewport
+{
+	border-bottom: 2px solid #8afaf0;
+}
+
+/* Nested Carousel */
+.nested.carousel
+{
+	margin-top: 100px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nested.carousel .panel,
+.nested.carousel .viewport
+{
+	width: 300px;
+	height: 120px;
+}
+
+.nested.carousel .tab
+{
+	height: 10px;
+	width: 10px;
+	border: 2px solid #dcdccc;
+	border-radius: 10px;
+	color: #dcdccc;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 9px;
+	text-align: center;
+	background-color: #1f1f1f;
+}
+
+.nested.carousel .current.tab
+{
+	color: #ffffff;
+	border-color: #8afaf0;
+}
+
+.nested.carousel .panel
+{
+	background-color: #dcdccc;
+	color: #1f1f1f;
+	text-align: center;
+	font-size: 16px;
+}
+
+.nested.carousel .viewport
+{
+	border-bottom: 2px solid #8afaf0;
+}
