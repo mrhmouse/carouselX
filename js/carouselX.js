@@ -1,6 +1,5 @@
 (function($) {
 jQuery.fn.carouselX = function(settings) {
-   // Video Carousel for ProviderConnections
 	//
 	//  Expects:
 	//	  <div class='whatever'>
