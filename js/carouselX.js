@@ -133,7 +133,7 @@
 
             // If there's a callback, respect it
             if ($this.settings.callback != null) {
-                $this.settings.callback();
+                $this.settings.callback($this);
             }
         });
     };
@@ -162,7 +162,7 @@
             carousel.find('*').andSelf().unbind('click');
             $.fn.carouselX.actions.init(carousel, settings);
 
-            if ($.cookie != null && $.cookie(cookie) != null) {
+            if ($.cookie != null && $.cookie(cookie) != null && $(carouselX.select.all.tabs + '[href=' + $.cookie(cookie) + ']').length) {
                 $(carouselX.select.all.tabs + '[href=' + $.cookie(cookie) + ']').triggerHandler('click');
             } else {
                 carousel.find(carouselX.select.child.tabs).first().triggerHandler('click');
@@ -374,6 +374,15 @@
                     $.cookie(carousel.selector + '-current-panel', current.tab.attr('href'));
                 }
                 return false;
+            });
+
+            // Make sure that, when panels are emptied, they are removed.
+            $panels.on('empty', function () {
+                var index = $panels.index(this);
+                $($panels[index]).remove();
+                $($tabs[index]).remove();
+                $.fn.carouselX.actions.resize(carousel);
+                $.fn.carouselX.actions.refresh(carousel);
             });
         }
     };
