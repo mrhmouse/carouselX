@@ -35,7 +35,7 @@
         select: {
             child: {
                 panels: '>.viewport>.panellist>.panel',
-                tabs: '>.tabwindow>.tablist>.tab',
+                tabs: '>.tabwindow>.tablist>.tab'
             },
             containerFor: {
                 panels: '>.viewport>.panellist',
