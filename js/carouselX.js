@@ -61,7 +61,7 @@
         //	  </div>
 
         // Default options
-        settings = settings || carouselX.loadSettings(settings);
+        settings = carouselX.loadSettings(settings);
 
         // The actual meat & potatoes
         return this.each(function (carousel) {
@@ -377,13 +377,16 @@
             });
 
             // Make sure that, when panels are emptied, they are removed.
-            $panels.on('empty', function () {
+            // This depends on the 'selfDestruct' plugin.
+            $panels.on('self-destruct', function () {
                 var index = $panels.index(this);
                 $($panels[index]).remove();
                 $($tabs[index]).remove();
                 $.fn.carouselX.actions.resize(carousel);
                 $.fn.carouselX.actions.refresh(carousel);
             });
+
+            carousel.trigger('carouselX.init');
         }
     };
 
