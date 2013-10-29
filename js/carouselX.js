@@ -159,7 +159,7 @@
             carousel.find(carouselX.select.containerFor.tabs).width(width * 2);
 
             // Rebind handlers
-            carousel.find('*').andSelf().unbind('click');
+            carousel.find('*').addBack().unbind('click');
             $.fn.carouselX.actions.init(carousel, settings);
 
             if ($.cookie != null && $.cookie(cookie) != null && $(carouselX.select.all.tabs + '[href=' + $.cookie(cookie) + ']').length) {
